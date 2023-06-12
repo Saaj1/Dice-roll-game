@@ -1,28 +1,39 @@
-//generate a random number from 1 to 6 on the dice
-const firstRandonNum = Math.floor(Math.random() * 6) + 1
+let currentPlayer = 1;
 
-// images for dice 1 to dice 6
-const firstDiceImage = 'images/dice' + firstRandonNum + '.png';
+function rollDice() {
+  const randomNum = Math.floor(Math.random() * 6) + 1;
+  const diceImage = 'images/dice' + randomNum + '.png';
+  document.querySelectorAll('img')[currentPlayer - 1].setAttribute('src', diceImage);
 
-document.querySelectorAll('img')[0].setAttribute('src', firstDiceImage);
-
-
-//generate a random number from 1 to 6 on the dice
-const secondRandonNum = Math.floor(Math.random() * 6) + 1
-
-// images for dice 1 to dice 6
-const secondDiceImage = 'images/dice' + secondRandonNum + '.png';
-
-document.querySelectorAll('img')[1].setAttribute('src', secondDiceImage);
-
-//logic for the winner
-
-if (firstDiceImage > secondDiceImage) {
-  document.querySelector('h1').innerHTML = 'Player 1 wins!';
-
-}else if (firstDiceImage < secondDiceImage) {
-  document.querySelector('h1').innerHTML = 'Player 2 wins!';
-
-}else {
-  document.querySelector('h1').innerHTML = 'Draw!';
+  if (currentPlayer === 1) {
+    document.querySelector('h1').innerHTML = 'Player 1 rolled a ' + randomNum;
+    currentPlayer = 2;
+    button.innerHTML = 'Player 2 Roll Dice';
+  } else {
+    document.querySelector('h1').innerHTML = 'Player 2 rolled a ' + randomNum;
+    currentPlayer = 1;
+    button.innerHTML = 'Player 1 Roll Dice';
+    determineWinner();
+  }
 }
+
+function determineWinner() {
+  const firstDiceNum = parseInt(document.querySelectorAll('img')[0].getAttribute('src').slice(-5, -4));
+  const secondDiceNum = parseInt(document.querySelectorAll('img')[1].getAttribute('src').slice(-5, -4));
+
+  if (firstDiceNum > secondDiceNum) {
+    document.querySelector('h1').innerHTML = 'Player 1 wins!';
+  } else if (firstDiceNum < secondDiceNum) {
+    document.querySelector('h1').innerHTML = 'Player 2 wins!';
+  } else {
+    document.querySelector('h1').innerHTML = 'Draw!';
+  }
+}
+
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  rollDice();
+});
+
+rollDice(); // initial roll on page load
+

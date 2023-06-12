@@ -26,3 +26,9 @@ img{
   width: 320px;
 
 }
+
+button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
