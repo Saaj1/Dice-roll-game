@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(to right, #FF5A5F, #FFC371);
+  background: linear-gradient(to right, #2a9134, #d90429);
+
 
 }
 .wrapper{
@@ -11,6 +12,7 @@ h1{
   margin: 20px;
   font-size: 6rem;
   color: rgb(208, 214, 218 );
+  text-shadow: 1px 1px black;
 }
 
 .dice-area{
@@ -27,10 +29,20 @@ img{
 
 }
 
-button {
+
+#start-button {
   font-size: 2rem;
   padding: 10px 20px;
   margin-top: 20px;
+  border-radius: 2rem;
+  border: none;
+  margin-top: 2rem;
 }
 
+button{
+  background-color: whitesmoke;
+  padding: 1rem;
+  border: none;
+  border-radius:2rem ;
 
+}
