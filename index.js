@@ -13,12 +13,12 @@ function rollDice() {
     document.querySelector('h1').innerHTML = 'Player 1 rolled a ' + randomNum;
     currentPlayer = 1;
     button.innerHTML = 'Player 2 Roll Dice';
-    button.style.backgroundColor = 'blue'; // change button color to blue for player 2
+    button.style.backgroundColor = '#2a9134'; // change button color to blue for player 2
   } else {
     document.querySelector('h1').innerHTML = 'Player 2 rolled a ' + randomNum;
     currentPlayer = 0;
     button.innerHTML = 'Player 1 Roll Dice';
-    button.style.backgroundColor = 'red'; // change button color to red for player 1
+    button.style.backgroundColor = '#d90429'; // change button color to red for player 1
     determineWinner();
   }
 }
