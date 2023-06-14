@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Moirai+One&family=Orbitron&display=swap');
 body {
-  background-image: url('https://t4.ftcdn.net/jpg/00/48/81/71/360_F_48817195_PBp0JoMwap0hvwJJTOHdO32RjUYeDbjS.jpg');
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/412/375/803/video-games-portal-game-black-background-wallpaper-preview.jpg');
   background-size: cover;
+
 }
 
+/* Wrapper */
 .wrapper {
   width: 70%;
   margin: auto;
@@ -16,6 +18,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Heading Styles */
 h1 {
   margin: 20px;
   font-size: 6rem;
@@ -25,39 +28,43 @@ h1 {
 
 h2 {
   color: whitesmoke;
-  font-size:4rem ;
+  font-size: 4rem;
   font-family: 'Moirai One', cursive;
-
 }
 
+/* Game Name Styles */
 .game-name {
   border: 2px solid whitesmoke;
   padding: 2px;
   border-radius: 2rem;
   margin-top: 8rem;
   border-top: 2px solid #17ffee;
-  border-bottom:2px solid #ff1791;
+  border-bottom: 2px solid #ff1791;
   border-left: 2px solid #17ffee;
   border-right: 2px solid #ff1791;
 }
 
+/* Dice Area Styles */
 .dice-area {
   margin: 0px 50px;
   text-align: center;
   display: inline-block;
 }
 
+/* Paragraph Styles */
 p {
   font-size: 2.5rem;
   color: whitesmoke;
   font-family: 'Orbitron', sans-serif;
 }
 
+/* Image Styles */
 img {
   width: 320px;
   border-radius: 15px;
 }
 
+/* Start Button Styles */
 #start-button {
   font-size: 2rem;
   padding: 10px 20px;
@@ -72,6 +79,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
+/* General Button Styles */
 button {
   background-color: whitesmoke;
   padding: 1rem;
@@ -79,20 +87,21 @@ button {
   border-radius: 2rem;
 }
 
+/* Player 1 Styles */
 .player1 {
   text-shadow: 3px 3px #ff1791;
 }
 
+/* Player 2 Styles */
 .player2 {
   text-shadow: 3px 3px #17ffee;
 }
 
-
+/* Footer Styles */
 footer {
   text-align: center;
   margin-top: 10rem;
   color: whitesmoke;
-  text-shadow: 1px 1px black;
   position: fixed;
   bottom: 2%;
   left: 50%;
