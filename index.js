@@ -13,12 +13,12 @@ function rollDice() {
     document.querySelector('h1').innerHTML = 'Player 1 rolled a ' + randomNum;
     currentPlayer = 1;
     button.innerHTML = 'Player 2 Roll Dice';
-    button.style.backgroundColor = '#2a9134'; // change button color to blue for player 2
+    button.style.backgroundColor = '#17ffee'; // change button color to blue for player 2
   } else {
     document.querySelector('h1').innerHTML = 'Player 2 rolled a ' + randomNum;
     currentPlayer = 0;
     button.innerHTML = 'Player 1 Roll Dice';
-    button.style.backgroundColor = '#d90429'; // change button color to red for player 1
+    button.style.backgroundColor = '#ff1791'; // change button color to red for player 1
     determineWinner();
   }
 }
@@ -80,6 +80,20 @@ button.addEventListener("click", () => {
 const newGameButton = document.createElement('button');
 newGameButton.innerHTML = 'Start New Game';
 newGameButton.style.display = 'none';
+newGameButton.style.position = 'fixed'; // Set the position to fixed
+newGameButton.style.top = '80%'; // Set the top position to 50%
+newGameButton.style.left = '50%'; // Set the left position to 50%
+newGameButton.style.transform = 'translate(-50%, -50%)'; // Translate the button to center it
+newGameButton.style.backgroundColor = 'aliceblue'; // Set the background color
+newGameButton.style.color = 'black'; // Set the text color
+newGameButton.style.padding = '20px 20px'; // Set padding around the text
+newGameButton.style.fontSize = '20px'; // Set the font size
+newGameButton.style.fontWeight = 'bold'; // Set the font weight
+newGameButton.style.border = 'none'; // Remove the border
+newGameButton.style.cursor = 'pointer'; // Change the cursor to a pointer
+newGameButton.style.backgroundColor = '#04e762';
+;
+
 newGameButton.addEventListener('click', () => {
   location.reload(); // refresh the page
 });
